@@ -3,17 +3,17 @@ let mainApp = angular.module('mainApp', []);
 mainApp.controller('firstController', ['$http', function($http){
     let self = this;
 
-    self.showFlag = true;
+    self.showFlag = false;
     self.inputText;
     self.imageData = [];
 
     self.imageData[0] = {
-        name: 'Paige',
-        role: 'Daughter',
-        imageLocation: '/images/paige.jpeg'
+        name: 'Paige and Ella',
+        role: 'Cousins',
+        imageLocation: '/images/Cousins.jpeg'
     };
     self.imageData[1] = {
-        name: 'Tucket',
+        name: 'Tucker',
         role: 'Dog',
         imageLocation: '/images/tucker.jpeg'
     };
@@ -40,7 +40,7 @@ mainApp.controller('firstController', ['$http', function($http){
 
     self.toggleShow = function(){
         //custom = $scope.custom === false ? true: false;
-        //self.showFlag = true;
+        //self.showFlag = false;
         self.showFlag = !self.showFlag;
         console.log(self.showFlag);
     };
@@ -54,7 +54,7 @@ mainApp.controller('firstController', ['$http', function($http){
 
 mainApp.controller('showController', ['$http', function($http){
     let self = this;
-    self.showFlag = true;
+    self.showFlag = false;
 
     self.toggleShow = function(){
         //custom = $scope.custom === false ? true: false;
