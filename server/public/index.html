@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>APIs!</title>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <script src="vendors/angular.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/main.css">
@@ -13,101 +13,23 @@
 </head>
 
 
-<body ng-app="mainApp">
+<body class="container-fluid" ng-app="mainApp">
 
-    <!--<main>-->
-        <!--<div ng-controller="firstController as vm">-->
-            <!--<h1>In first controller</h1>-->
+    <header class="text-center">
 
-            <!--<input type="text" ng-model="vm.inputText">{{vm.inputText}}-->
-            <!--<p><button ng-click="vm.toggleShow()">click me</button></p>-->
+            <h1 class="font-weight-bold">Meet the family!</h1>
+            <h5>Click on a picture to see some info.</h5>
+            <p></p>
 
-            <!--<div ng-show="vm.showFlag">-->
-                <!--<p>{{vm.inputText}}</p>-->
-            <!--</div>-->
-        <!--</div>-->
+    </header>
 
-        <!--<div>-->
-            <!--&lt;!&ndash;<p ng-init="myVar = 'images/tucker.jpeg'">&ndash;&gt;-->
-            <!--<p> <h2>Pictures</h2> </p>-->
-            <!--<p>-->
-                <!--<div ng-controller="firstController as vm">-->
-                <!--<img class ="img_cont" ng-src="{{vm.imageData[0].imageLocation}}" ng-click="vm.toggleShow()" ng-hide="vm.showFlag">-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[1].imageLocation}}" ng-click="vm.toggleShow()" ng-hide="!vm.showFlag">-->
-                <!--</div>-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[1].imageLocation}}" ng-click="vm.toggleShow()" ng-show="vm.showFlag">-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[2].imageLocation}}" ng-click="vm.pictureClick()">-->
-            <!--</p>-->
-            <!--<br>-->
-            <!--<p>-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[3].imageLocation}}" ng-click="vm.pictureClick()">-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[4].imageLocation}}" ng-click="vm.pictureClick()">-->
-                <!--<img class ="img_cont rotate90" ng-src="{{vm.imageData[5].imageLocation}}" ng-click="vm.pictureClick()">-->
-            <!--</p>-->
-        <!--</div>-->
-
-        <!--<div ng-controller="firstController as vm">-->
-
-            <!--<table>-->
-                <!--<tr>-->
-                    <!--<td><img class ="img_cont rotate90" ng-src="{{x.imageLocation}}" ng-click="show.toggleShow()" ng-hide="show.showFlag"></td>-->
-                    <!--<td class ="makeBox" ng-click="show.toggleShow()" ng-hide="!show.showFlag">{{x.name}}</td>-->
-                <!--</tr>-->
-            <!--</table>-->
-
-        <!--</div>-->
-
-
-
-
-
-    <!---->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-sm-4 rows">-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[0].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[0].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[1].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[1].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[2].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[2].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-sm-4 rows">-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[3].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[3].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[4].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[4].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-                <!--<div ng-controller="firstController as vm">-->
-                    <!--<p ng-show = "vm.showFlag">{{vm.imageData[5].name}}</p>-->
-                    <!--<img class ="img_cont" ng-src="{{vm.imageData[5].imageLocation}}" ng-click="vm.toggleShow()">-->
-                <!--</div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-
-    <!--</div>-->
-
-
-    <h2>Using ng Repeat</h2>
-    <div ng-controller="firstController as vm">
+    <div class="row row-centered" ng-controller="firstController as vm">
         <div ng-repeat="pictureData in vm.imageData">
             <div ng-controller="showController as vm">
-                <p ng-show = "vm.showFlag">{{pictureData.name}}</p>
-                <img class ="img_cont" ng-src="{{pictureData.imageLocation}}" ng-click="vm.toggleShow()">
+                <img class="col img_cont" ng-src="{{pictureData.imageLocation}}" ng-click="vm.toggleShow()">
+                <p class="text-center"><span ng-show="vm.showFlag">{{pictureData.name}}</span> <span ng-show="!vm.showFlag"> . </span></p>
             </div>
         </div>
     </div>
-
-    </main>
 
 </body>

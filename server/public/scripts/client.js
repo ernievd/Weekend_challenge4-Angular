@@ -8,32 +8,32 @@ mainApp.controller('firstController', ['$http', function($http){
     self.imageData = [];
 
     self.imageData[0] = {
-        name: 'Paige and Ella',
+        name: 'Daughter Paige and Niece Ella',
         role: 'Cousins',
         imageLocation: '/images/Cousins.jpeg'
     };
     self.imageData[1] = {
-        name: 'Tucker',
-        role: 'Dog',
+        name: 'Tucker!',
+        role: 'Pet',
         imageLocation: '/images/tucker.jpeg'
     };
     self.imageData[2] = {
-        name: 'Ana',
+        name: 'Wife Ana',
         role: 'Wife',
         imageLocation: '/images/Ana.jpeg'
     };
     self.imageData[3] = {
-        name: 'Cody',
+        name: 'Brother Cody',
         role: 'Brother',
         imageLocation: '/images/Cody.jpeg'
     };
     self.imageData[4] = {
-        name: 'Kent',
+        name: 'Poppa Kent',
         role: 'Uncle',
         imageLocation: '/images/Kent.jpeg'
     };
     self.imageData[5] = {
-        name: 'Nicole',
+        name: 'Aunt Nicole',
         role: 'Sister',
         imageLocation: '/images/nicole.jpeg'
     };
