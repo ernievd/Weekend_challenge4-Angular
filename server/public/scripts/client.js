@@ -1,6 +1,6 @@
 let mainApp = angular.module('mainApp', []);
 
-mainApp.controller('firstController', ['$http', function($http){
+mainApp.controller('mainController', ['$http', function($http){
     let self = this;
 
     self.showFlag = false;

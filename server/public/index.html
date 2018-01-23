@@ -23,7 +23,7 @@
 
     </header>
 
-    <div class="row row-centered" ng-controller="firstController as vm">
+    <div class="row row-centered" ng-controller="mainController as vm">
         <div ng-repeat="pictureData in vm.imageData">
             <div ng-controller="showController as vm">
                 <img class="col img_cont" ng-src="{{pictureData.imageLocation}}" ng-click="vm.toggleShow()">
